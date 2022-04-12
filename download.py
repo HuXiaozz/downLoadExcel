@@ -50,7 +50,7 @@ def download():
     for index in tables:
         file = downLoadPath+'/'+index['road_name']
         url = index['download_rul']
-        if(len(url) == 0 or url[:4] != 'http' or index['size'] > 10):
+        if(len(url) == 0 or url[:4] != 'http'):
             continue
 
         response = requests.get(url,stream=True)
